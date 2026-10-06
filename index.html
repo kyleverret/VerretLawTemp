@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verret Law, PLLC | Houston, Texas</title>
+  <meta name="description" content="Verret Law, PLLC — Helping People Navigate Life's Problems. Kyle Verret, attorney with more than 20 years of experience in navigating legal challenges. Principal office in Houston, Texas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #0d1424;
+      --navy-900: #141c30;
+      --navy-800: #1c2640;
+      --navy-700: #263252;
+      --silver-100: #f1f3f6;
+      --silver-300: #c9ced8;
+      --silver-500: #9aa1b0;
+      --rule: rgba(201, 206, 216, 0.22);
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --sans: "Source Sans 3", -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--navy-900);
+      color: var(--silver-300);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 48px 0 72px;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 40%, var(--navy-800) 0%, var(--navy-900) 70%);
+      overflow: hidden;
+    }
+
+    .hero-logo {
+      display: block;
+      width: min(760px, 100%);
+      height: auto;
+      margin: 0 auto;
+      /* Feather the photo's leather edges into the page background */
+      -webkit-mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 80%, transparent 100%);
+              mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 80%, transparent 100%);
+    }
+
+    .tagline {
+      margin: 8px auto 0;
+      max-width: 22ch;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-style: italic;
+      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+      line-height: 1.2;
+      color: var(--silver-100);
+      letter-spacing: 0.01em;
+    }
+
+    .divider {
+      width: 96px;
+      height: 1px;
+      margin: 32px auto 0;
+      border: 0;
+      background: linear-gradient(90deg, transparent, var(--silver-500), transparent);
+    }
+
+    .hero-meta {
+      margin: 24px 0 0;
+      font-size: 0.9375rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--silver-500);
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 80px 0; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver-500);
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.15;
+      color: var(--silver-100);
+    }
+
+    .about {
+      background: var(--navy-950);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 40px 24px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      background: linear-gradient(180deg, var(--navy-800), var(--navy-900));
+    }
+
+    .stat-number {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(4rem, 10vw, 6rem);
+      line-height: 1;
+      color: var(--silver-100);
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.9375rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--silver-500);
+    }
+
+    .about p { margin: 0 0 16px; max-width: 58ch; }
+    .about p:last-child { margin-bottom: 0; }
+
+    /* ---------- Practice areas ---------- */
+    .practice-head { text-align: center; margin-bottom: 48px; }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      padding: 36px 28px;
+      border: 1px solid var(--rule);
+      border-top: 2px solid var(--silver-500);
+      border-radius: 4px;
+      background: var(--navy-800);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: var(--silver-100);
+    }
+
+    .card p { margin: 0; font-size: 1rem; }
+
+    .disclaimer-inline {
+      margin: 32px 0 0;
+      text-align: center;
+      font-size: 0.9375rem;
+      color: var(--silver-500);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 48px 0;
+      background: var(--navy-950);
+      border-top: 1px solid var(--rule);
+      font-size: 0.9375rem;
+      color: var(--silver-500);
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-firm {
+      margin: 0 0 4px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--silver-100);
+    }
+
+    footer p { margin: 0; }
+
+    .legal {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+    }
+
+    .legal p + p { margin-top: 8px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .practice-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 0 16px; }
+      .hero { padding: 24px 0 56px; }
+      section { padding: 56px 0; }
+      .hero-meta { letter-spacing: 0.12em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1 style="margin:0">
+        <img class="hero-logo" src="assets/VerretLaw.jpeg" width="2162" height="1952"
+             alt="Verret Law, PLLC">
+      </h1>
+      <p class="tagline">Helping People Navigate Life&rsquo;s Problems</p>
+      <hr class="divider">
+      <p class="hero-meta">Houston, Texas</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about" aria-labelledby="about-heading">
+      <div class="wrap about-grid">
+        <div class="stat">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div>
+          <p class="eyebrow">Attorney</p>
+          <h2 id="about-heading">Kyle Verret</h2>
+          <p>
+            For more than 20 years, Kyle Verret has guided clients through some of
+            the most difficult moments of their lives &mdash; criminal charges,
+            family transitions, and planning for the future.
+          </p>
+          <p>
+            Verret Law, PLLC offers clear advice, honest answers, and steady
+            representation from a principal office in Houston, Texas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="practice-heading">
+      <div class="wrap">
+        <div class="practice-head">
+          <p class="eyebrow">Practice Areas</p>
+          <h2 id="practice-heading">How We Can Help</h2>
+        </div>
+        <div class="practice-grid">
+          <article class="card">
+            <h3>Criminal Defense</h3>
+            <p>Defense and guidance when you or a loved one is facing criminal charges.</p>
+          </article>
+          <article class="card">
+            <h3>Family Law</h3>
+            <p>Support through divorce, custody, and other family matters.</p>
+          </article>
+          <article class="card">
+            <h3>Estate Planning &amp; Probate</h3>
+            <p>Wills, planning documents, and help administering a loved one&rsquo;s estate.</p>
+          </article>
+        </div>
+        <p class="disclaimer-inline">Not Certified by the Texas Board of Legal Specialization.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-firm">Verret Law, PLLC</p>
+          <p>Kyle Verret, Attorney at Law</p>
+        </div>
+        <div>
+          <p>Principal Office: Houston, Texas</p>
+        </div>
+      </div>
+      <div class="legal">
+        <p>Kyle Verret is Not Certified by the Texas Board of Legal Specialization.</p>
+        <p>
+          The information on this website is for general informational purposes only
+          and is not legal advice. Viewing this site or contacting the firm does not
+          create an attorney&ndash;client relationship.
+        </p>
+        <p>The Fleur de V / Fleur de lis with overlaid V is the service mark of Verret Law, PLLC.</p>
+        <p>&copy; <span id="year">2026</span> Verret Law, PLLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
