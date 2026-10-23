@@ -156,7 +156,8 @@
     .topnav a:focus-visible,
     .brand:focus-visible,
     .btn:focus-visible,
-    .footer-contact a:focus-visible {
+    .footer-contact a:focus-visible,
+    .footer-attorneys a:focus-visible {
       outline: 1px solid var(--silver-100);
       outline-offset: 4px;
     }
@@ -307,7 +308,7 @@
 
     .practice-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
 
@@ -362,6 +363,23 @@
     }
 
     footer p { margin: 0; }
+
+    .footer-attorneys { margin: 0; padding: 0; list-style: none; }
+
+    .footer-attorneys li + li { margin-top: 4px; }
+
+    .footer-attorneys a {
+      margin-left: 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--silver-100);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .footer-attorneys a:hover { border-bottom-color: var(--silver-100); }
 
     .footer-contact { font-style: normal; }
 
@@ -487,6 +505,10 @@
             <p>Defense and guidance when you or a loved one is facing criminal charges.</p>
           </article>
           <article class="card">
+            <h3>Family Law</h3>
+            <p>Support through divorce, custody, and other family matters.</p>
+          </article>
+          <article class="card">
             <h3>Civil Litigation</h3>
             <p>Representation in lawsuits and disputes, from negotiation through trial.</p>
           </article>
@@ -505,7 +527,18 @@
       <div class="footer-grid">
         <div>
           <p class="footer-firm">Verret Law, PLLC</p>
-          <p>Kyle Verret, Attorney at Law</p>
+          <ul class="footer-attorneys">
+            <li>
+              Kyle Verret, Trial Lawyer
+              <a href="https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&amp;template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&amp;ContactID=276301"
+                 target="_blank" rel="noopener" aria-label="Kyle Verret's State Bar of Texas profile (opens in a new tab)">State Bar Profile</a>
+            </li>
+            <li>
+              Deborah Verret, Of Counsel
+              <a href="https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer&amp;template=/Customsource/MemberDirectory/MemberDirectoryDetail.cfm&amp;ContactID=313435"
+                 target="_blank" rel="noopener" aria-label="Deborah Verret's State Bar of Texas profile (opens in a new tab)">State Bar Profile</a>
+            </li>
+          </ul>
         </div>
         <address class="footer-contact">
           <p>Verret Law, PLLC</p>
